@@ -31,6 +31,12 @@ gulp.task('less', function () {
 });
 
 
+gulp.task('watch', function(){
+  gulp.watch('less/*.less', ['less']);
+  // Other watchers
+})
+
+
 // gulp.task('task-name', function () {
 //   return gulp.src('source-files') // Get source files with gulp.src
 //     .pipe(aGulpPlugin()) // Sends it through a gulp plugin
