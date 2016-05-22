@@ -1,5 +1,7 @@
 // Mixins
 
+@import url(https://fonts.googleapis.com/css?family=Lobster|PT+Serif:400,400italic|Arvo:400,400italic|Bree+Serif|Pacifico);
+
 .transition-all() {
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
@@ -44,9 +46,9 @@
 		&:active,
 		&.active {
 			background-color: @background;
+    }
 			border-color: @border;
 		}
-	}
 
 	.badge {
 		color: @background;
@@ -59,5 +61,32 @@
 }
 
 .serif-font() {
+
 	font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+
+}
+.lobster-font(){
+
+  font-family: 'Lobster', cursive;
+
+}
+
+.pt-serif-font(){
+
+  font-family: 'PT Serif', serif;
+
+}
+
+.arvo-font(){
+
+  font-family: 'Arvo', serif;
+
+}
+
+.bree-serif-font(){
+  font-family: 'Bree Serif', serif;
+}
+
+.pacifico-font(){
+  font-family: 'Pacifico', cursive;
 }
