@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var less = require('gulp-less');
 var path = require('path');
+var browserSync = require('browser-sync').create();
 
 // include plug-ins
 var jshint = require('gulp-jshint');
@@ -18,6 +19,8 @@ gulp.task('sass', function(){
   return gulp.src('css/exampleless.less')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('css/exless/'))
+    .pipe(browserSync.reload({
+      stream: true}))
 });
 
 
@@ -27,12 +30,25 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.reload({
+      stream: true}))
 });
 
 
-gulp.task('watch', function(){
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'D:/Projects/Github/Marshmallow-Lab/'
+    },
+  })
+})
+
+
+gulp.task('watch', ['browserSync', 'less'], function(){
   gulp.watch('less/*.less', ['less']);
+  gulp.watch('*.html', browserSync.reload); 
+  gulp.watch('js/*.js', browserSync.reload);
   // Other watchers
 })
 
