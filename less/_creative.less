@@ -2,6 +2,8 @@
 @import "_mixins.less";
 
 // Global Components
+
+
 html,
 body {
     height: 100%;
@@ -9,7 +11,7 @@ body {
 }
 
 body {
-    .serif-font;
+    .bree-serif-font;
 }
 
 hr {
@@ -37,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-    .sans-serif-font ;
+    .pt-serif-font;
 }
 
 p {
@@ -75,17 +77,35 @@ aside {
 
 .navbar-default {
     background-color: white;
-    border-color: fade(@theme-dark, 5%);
+    border-color: fade(@theme-dark, 0%);
     .sans-serif-font;
     .transition-all;
     .navbar-header .navbar-brand {
         color: @theme-primary;
-        .sans-serif-font;
-        font-weight: 700;
-        text-transform: uppercase;
+        .pacifico-font;
+        font-weight: 100;
+        text-transform: capitalize;
         &:hover,
-        &:focus {
+        &:focus  {
             color: darken(@theme-primary, 10%);
+        }
+
+        .brand-logo {
+          position: relative;
+          width: auto;
+          height: auto;
+          padding-top: 50%;
+          margin: 10px auto;
+          background-image: url('/img/logo.png');
+          background-position: top;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: block;
+          &:hover,
+          &:focus  {
+            //padding-top: 75%;
+          }
         }
     }
     .nav {
@@ -114,13 +134,14 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: fade(white, 30%);
+    //    border-color: fade(white, 30%);
         .navbar-header .navbar-brand {
-            color: fade(white, 70%);
-            &:hover,
-            &:focus {
-                color: white;
-            }
+          position: relative;
+          color: rgb(200, 200, 200);
+          &:hover,
+          &:focus {
+              color: white;
+          }
         }
         .nav > li > a,
         .nav > li > a:focus {
@@ -134,7 +155,7 @@ aside {
             border-color: fade(@theme-dark, 5%);
             .navbar-header .navbar-brand {
                 color: @theme-primary;
-                font-size: 14px;
+                font-size: 18px;
                 &:hover,
                 &:focus {
                     color: darken(@theme-primary, 10%);

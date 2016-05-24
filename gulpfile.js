@@ -39,7 +39,7 @@ gulp.task('less', function () {
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: 'D:/Projects/Github/Marshmallow-Lab/'
+      baseDir: "./"
     },
   })
 })
@@ -47,7 +47,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('watch', ['browserSync', 'less'], function(){
   gulp.watch('less/*.less', ['less']);
-  gulp.watch('*.html', browserSync.reload); 
+  gulp.watch('*.html', browserSync.reload);
   gulp.watch('js/*.js', browserSync.reload);
   // Other watchers
 })
