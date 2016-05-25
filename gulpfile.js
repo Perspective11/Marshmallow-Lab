@@ -4,6 +4,8 @@ var sass = require('gulp-sass');
 var less = require('gulp-less');
 var path = require('path');
 var browserSync = require('browser-sync').create();
+var plumber = require('gulp-plumber');
+
 
 // include plug-ins
 var jshint = require('gulp-jshint');
@@ -17,6 +19,7 @@ gulp.task('jshint', function() {
 
 gulp.task('sass', function(){
   return gulp.src('css/exampleless.less')
+    .pipe(plumber())
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('css/exless/'))
     .pipe(browserSync.reload({
@@ -27,14 +30,17 @@ gulp.task('sass', function(){
 
 gulp.task('less', function () {
   return gulp.src(['./less/*.less', '!./less/_*.*'])
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
+    .pipe(plumber({ errorHandler: handleError }))
+    .pipe(less())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({
       stream: true}))
 });
 
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+};
 
 gulp.task('browserSync', function() {
   browserSync.init({
