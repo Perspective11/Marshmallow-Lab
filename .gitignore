@@ -150,3 +150,7 @@ fabric.properties
 
 # *.iml
 # modules.xml
+.idea/misc.xml
+.idea/encodings.xml
+*.idea
+.idea/Marshmallow-Lab.iml
