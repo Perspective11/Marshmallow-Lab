@@ -38,7 +38,7 @@ gulp.task('less', function () {
 });
 
 function handleError(err) {
-  console.log(err.toString());
+  console.error(err.toString());
   this.emit('end');
 };
 
