@@ -1,10 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster|PT+Serif:400,400italic|Arvo:400,400italic|Bree+Serif|Pacifico);
 html,
 body {
   height: 100%;
   width: 100%;
 }
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Bree Serif', serif;
 }
 hr {
   border-color: #F05F40;
@@ -30,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'PT Serif', serif;
 }
 p {
   font-size: 16px;
@@ -58,7 +59,7 @@ aside {
 }
 .navbar-default {
   background-color: white;
-  border-color: rgba(34, 34, 34, 0.05);
+  border-color: rgba(34, 34, 34, 0);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
@@ -66,13 +67,33 @@ aside {
 }
 .navbar-default .navbar-header .navbar-brand {
   color: #F05F40;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;
+  text-transform: capitalize;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
   color: #eb3812;
+}
+.navbar-default .navbar-header .navbar-brand .brand-logo {
+  width: 40px;
+  height: 40px;
+  float: left;
+  padding: 0;
+  margin: -10px 10px 0 0;
+  display: block;
+  background-image: url('/img/logo.png');
+  background-position: top;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.navbar-default .navbar-header .navbar-brand .brand-logo:hover,
+.navbar-default .navbar-header .navbar-brand .brand-logo:focus {
+  transform: scale(1.3) translate(0px, 10px);
 }
 .navbar-default .nav > li > a,
 .navbar-default .nav > li > a:focus {
@@ -97,10 +118,21 @@ aside {
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.3);
   }
   .navbar-default .navbar-header .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    color: #c8c8c8;
+  }
+  .navbar-default .navbar-header .navbar-brand .brand-logo {
+    position: relative;
+    float: none;
+    width: auto;
+    height: auto;
+    padding-top: 50%;
+    margin: 10px auto;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
   }
   .navbar-default .navbar-header .navbar-brand:hover,
   .navbar-default .navbar-header .navbar-brand:focus {
@@ -120,11 +152,26 @@ aside {
   }
   .navbar-default.affix .navbar-header .navbar-brand {
     color: #F05F40;
-    font-size: 14px;
+    font-size: 18px;
+  }
+  .navbar-default.affix .navbar-header .navbar-brand .brand-logo {
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding: 0;
+    margin: -10px 10px 0 0;
+    display: block;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #f7ae9f;
+    transition: scale(1.4);
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -144,7 +191,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
+  background-image: url('../img/header1.jpg');
   text-align: center;
   color: white;
 }
@@ -207,6 +254,7 @@ header .header-content .header-content-inner p {
 }
 .service-box p {
   margin-bottom: 0;
+  font-size: 12px;
 }
 .portfolio-box {
   position: relative;
@@ -294,6 +342,11 @@ header .header-content .header-content-inner p {
 }
 .btn-default.disabled,
 .btn-default[disabled],
+fieldset[disabled] .btn-default {
+  border-color: white;
+}
+.btn-default.disabled,
+.btn-default[disabled],
 fieldset[disabled] .btn-default,
 .btn-default.disabled:hover,
 .btn-default[disabled]:hover,
@@ -311,7 +364,6 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: white;
-  border-color: white;
 }
 .btn-default .badge {
   color: white;
@@ -342,6 +394,11 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary.disabled,
 .btn-primary[disabled],
+fieldset[disabled] .btn-primary {
+  border-color: #F05F40;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
 fieldset[disabled] .btn-primary,
 .btn-primary.disabled:hover,
 .btn-primary[disabled]:hover,
@@ -359,7 +416,6 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #F05F40;
-  border-color: #F05F40;
 }
 .btn-primary .badge {
   color: #F05F40;
