@@ -321,7 +321,6 @@ header {
             text-align: center;
             h4 {
             	font-size: 12px;
-            	
             	line-height: 14px;
               padding-top: 10px;
             }
@@ -355,6 +354,7 @@ header {
         &:last-child {
         	margin-bottom: 0;
         }
+
     }
 	.timeline-heading {
 		h4 {
@@ -365,14 +365,21 @@ header {
 		    }
 		}
 	}
+
 	.timeline-body {
 		> p,
 		> ul {
 			margin-bottom: 0;
-      color: fade(@theme-dark, 50%);
+      color: white;
       font-size: 14px;
+      //border: solid 4px white;
+      padding:10px;
+      //border-radius: 20px 4px 20px 20px;
 		}
+
+
 	}
+
 }
 
 @media(min-width:768px) {
@@ -380,6 +387,13 @@ header {
 		&:before {
 			left: 50%;
 		}
+    .timeline-body {
+  		> p,
+  		> ul {
+        border: solid 4px white;
+        border-radius: 20px 4px 20px 20px;
+  		}
+    }
 	    > li {
 	    	margin-bottom: 100px;
 	        min-height: 100px;
@@ -410,23 +424,26 @@ header {
 	            padding: 0 30px 20px 20px;
 	        }
 	    }
+      .timeline-inverted p {
+        border-radius: 4px 20px 20px 20px;
+      }
 	}
 }
 
 @media(min-width:992px) {
 	.timeline {
 	    > li {
-	        min-height: 150px;
+	        min-height: 130px;
 			.timeline-panel {
 	            padding: 0 20px 20px;
 	        }
 	        .timeline-image {
-	            width: 150px;
-	            height: 150px;
-	            margin-left: -75px;
+	            width: 130px;
+	            height: 130px;
+	            margin-left: -65px;
 	            h4 {
             		font-size: 20px;
-	            	margin-top: 30px;
+	            	margin-top: 15px;
 	            	line-height: 26px;
 	            }
               .time{
@@ -443,16 +460,16 @@ header {
 @media(min-width:1200px) {
 	.timeline {
 	    > li {
-	        min-height: 170px;
+	        min-height: 140px;
 			.timeline-panel {
 	            padding: 0 20px 20px 100px;
 	        }
 	        .timeline-image {
-	            width: 170px;
-	            height: 170px;
-	            margin-left: -85px;
+	            width: 140px;
+	            height: 140px;
+	            margin-left: -70px;
 	            h4 {
-	            	margin-top: 40px;
+	            	margin-top: 20px;
                 font-size: 22px;
 	            }
 	        }
@@ -499,6 +516,10 @@ p.desc {
         margin-bottom: 0;
         font-size: 14px;
     }
+}
+.touchballs{
+  height:700px;
+  background-color: @theme-primary;
 }
 
 
