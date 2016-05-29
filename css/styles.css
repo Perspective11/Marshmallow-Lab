@@ -489,14 +489,35 @@ section#services {
 .container-fluid.touchballs .mobile-view img.android {
   height: 100px;
   width: 100px;
+  margin-bottom: 40px;
 }
 .container-fluid.touchballs .mobile-view div.video-container {
-  background-image: url("../img/touchballs.png");
+  background-image: url("../img/phonecontainer.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 400px;
-  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+.container-fluid.touchballs .mobile-view div.video-container:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 56.62650602%;
+}
+.container-fluid.touchballs .mobile-view div.video-container > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container-fluid.touchballs .mobile-view video {
+  position: absolute;
+  top: 9%;
+  left: 11.7%;
+  width: 75%;
+  transform: scale(1.03);
 }
 .container-fluid.touchballs div.content {
   width: auto;
@@ -528,6 +549,9 @@ section#services {
   margin: 50px auto 100px;
   display: block;
   width: 250px;
+}
+.container-fluid.touchballs div.content img {
+  max-width: 100%;
 }
 .container.services {
   margin-bottom: 100px;
