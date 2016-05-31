@@ -626,6 +626,27 @@ section#services {
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
+#contact {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+#contact .form-container {
+  text-align: center;
+  display: block;
+  margin: 50px auto;
+  max-width: 800px;
+  width: auto;
+}
+#contact input {
+  margin: 10px;
+}
+#contact textarea {
+  margin: 10px;
+  width: 100%;
+  height: 122px;
+}
 .text-primary {
   color: #F05F40;
 }
