@@ -6,6 +6,7 @@
 
 (function($) {
     "use strict"; // Start of use strict
+    var video = document.getElementById("video");
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
@@ -40,9 +41,22 @@
         offset: {
             top: 100
         }
+
     })
+
+    // Hide the play button if the video is playing
+    $('video').on('play', function(event) {
+        $('#play').hide();
+    });
+
+    // Button listener for playing the video
+    $('#play').click(function () {
+        video.play();
+    });
+
 
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
+
 
 })(jQuery); // End of use strict
