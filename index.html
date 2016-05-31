@@ -219,11 +219,12 @@
             <div class="col-lg-6 col-md-12 text-center mobile-view">
                 <img class="android" src="./img/android.png" />
                 <div class="video-container">
-                  <video poster="./img/Touchballs-scr.png" autoplay="true" loop="true" muted="true">
-                    <source src="./img/Touchballs.mp4" type="video/mp4" />
-                    <source src="./img/touchballs.webm" type="video/webm" />
-                </video>
-
+                    <video id="video" poster="img/Touchballs-scr.png" preload="auto" title="Touchballs" loop autoplay autostart>
+                        <source src="img/Touchballs.mp4" />
+                        <source src="img/Touchballs.webm" type="video/webm" />
+                        <source src="img/Touchballs.ogv" type="video/ogg" />
+                    </video>
+                    <button id="play" type="button" name="button"></button>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 text-left description">
@@ -231,7 +232,6 @@
                     <div class="timeline-heading">
                         <h2>Touch Balls</h2>
                         <hr class="primary light">
-                        <!-- <h4 class="subheading">Transition to Full Service</h4> -->
                     </div>
                     <div class="timeline-body">
                         <p class="text-muted">Score the highest of your friends by catching the most number of falling balls.</p>
@@ -239,13 +239,13 @@
 
                     <div class="timeline-heading">
                         <h4>Description</h4>
-                        <!-- <h4 class="subheading">Transition to Full Service</h4> -->
                     </div>
                     <div class="timeline-body">
-                        <p class="text-muted">Touch Balls is a game that tests your focus, eye-hand coordination, and responsiveness by trying to catch the most number of falling balls. You can challenge your self by setting a new high score and breaking that record. You can also see your Facebook friend's high score, and try to out-best them.</p>
+                        <p class="text-muted">Touch Balls is a game that tests your focus, eye-hand coordination, and responsiveness by trying to catch the most number of falling balls. You can challenge your self by setting a new high score and breaking that record. You can
+                            also see your Facebook friend's high score, and try to out-best them.</p>
                     </div>
                     <!-- <a href="#" class="btn btn-default btn-xl">Show Me More!</a> -->
-                    <a href='https://play.google.com/store/apps/details?id=com.fueltanklab.TouchBalls&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                    <a href='https://play.google.com/store/apps/details?id=com.fueltanklab.TouchBalls&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' /></a>
                 </div>
             </div>
 

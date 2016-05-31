@@ -482,6 +482,7 @@ section#services {
     }
 }
 .container-fluid.touchballs {
+  position: relative;
     //min-height:auto;
     background-color: @theme-primary;
     .mobile-view {
@@ -499,7 +500,6 @@ section#services {
             background-size: contain;
             .aspect-ratio(830px,470px);
             overflow: hidden;
-
         }
         video {
           position: absolute;
@@ -509,7 +509,23 @@ section#services {
           transform: scale(1.03);
         }
 
+
     }
+    #play{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top : 0;
+      bottom: 0;
+      width: 100%;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('/img/play.png');
+      background-color: inherit;
+      border: none;
+    }
+
     div.content {
         width: auto;
         margin-top: 50px;

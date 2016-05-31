@@ -481,6 +481,7 @@ section#services {
   font-size: 14px;
 }
 .container-fluid.touchballs {
+  position: relative;
   background-color: #F05F40;
 }
 .container-fluid.touchballs .mobile-view {
@@ -518,6 +519,20 @@ section#services {
   left: 11.7%;
   width: 75%;
   transform: scale(1.03);
+}
+.container-fluid.touchballs #play {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/img/play.png');
+  background-color: inherit;
+  border: none;
 }
 .container-fluid.touchballs div.content {
   width: auto;
