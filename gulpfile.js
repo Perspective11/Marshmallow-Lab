@@ -5,6 +5,7 @@ var less = require('gulp-less');
 var path = require('path');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
+var autoprefixer = require('gulp-autoprefixer');
 
 
 // include plug-ins
@@ -32,6 +33,9 @@ gulp.task('less', function () {
   return gulp.src(['./less/*.less', '!./less/_*.*'])
     .pipe(plumber({ errorHandler: handleError }))
     .pipe(less())
+    .pipe(autoprefixer({
+			browsers: ['> 5%'],
+			cascade: false}))
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({
       stream: true}))
