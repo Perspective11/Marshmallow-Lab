@@ -622,45 +622,56 @@ section#services {
   margin: 0 auto 20px;
 }
 #contact {
+  padding: 0;
+}
+.social-div {
+  padding: 100px 0;
+}
+.message-div {
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
   background-color: #222;
   background-image: url("../img/message-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
-  color: white;
-  text-align: center;
-  overflow: hidden;
 }
-#contact .form-container {
+.message-div .form-container {
   text-align: center;
   display: block;
   margin: 50px auto;
   max-width: 800px;
   width: auto;
 }
-#contact input {
+.message-div input {
   margin: 10px auto;
 }
-#contact textarea {
+.message-div textarea {
   margin: 10px auto 15px;
   width: 100%;
   height: 122px;
 }
-#contact .form-control {
+.message-div .form-control {
   opacity: 0.7;
   max-width: 500px;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
-#contact .form-control:focus {
+.message-div .form-control:focus {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
   opacity: 1;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(254, 254, 254, 0.98);
 }
-#contact .submit-form {
+.message-div .submit-form {
   display: block;
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.6);
+  font-family: 'PT Serif', serif;
+  font-weight: 800;
   height: auto;
   min-width: 200px;
   padding: 15px 0;
@@ -668,17 +679,19 @@ section#services {
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
-#contact .submit-form:hover,
-#contact .submit-form:focus {
+.message-div .submit-form:hover,
+.message-div .submit-form:focus {
   opacity: 1;
   color: black;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(254, 254, 254, 0.98);
 }
 @media (min-width: 992px) {
-  #contact .submit-form {
-    float: left;
+  .message-div .submit-form {
+    float: right;
     padding: 6px 12px;
-    margin-left: 15px;
+    margin-right: 15px;
     height: 34px;
   }
 }
