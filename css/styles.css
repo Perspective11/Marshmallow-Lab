@@ -56,13 +56,6 @@ section {
 aside {
   padding: 50px 0;
 }
-.background1 {
-  background-image: url("../img/header.jpg");
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-}
 .no-padding {
   padding: 0;
 }
@@ -474,6 +467,12 @@ section#services {
   margin-bottom: 0;
   font-size: 14px;
 }
+#work {
+  color: white;
+}
+#work .work-heading {
+  margin-top: 100px;
+}
 .container-fluid.touchballs {
   position: relative;
   background-color: #F05F40;
@@ -514,7 +513,6 @@ section#services {
   width: 75%;
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
-  background-image: url('../img/Touchballs-scr.png');
 }
 .container-fluid.touchballs #play {
   position: absolute;
@@ -622,6 +620,9 @@ section#services {
     font-size: 22px;
   }
 }
+.know-more {
+  background-color: #F05F40;
+}
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
@@ -693,34 +694,19 @@ section#services {
 .social-div .linkscontainer .links i.youtube {
   background-color: #cd201f;
 }
-.social-div .phone-div {
-  color: #F05F40;
-}
+.social-div .phone-div,
 .social-div .email-div {
-  color: #F05F40;
-}
-.social-div a {
-  text-decoration: none;
-}
-.social-div i:hover + p {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.social-div a:hover > p {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
+  color: #222;
+  width: 70%;
+  min-width: 260px;
+  margin: auto;
 }
 .social-div i {
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  background-color: #F05F40;
-  font-size: 40px;
-  color: white;
+  background-color: white;
+  font-size: 50px;
   padding: 20px;
   margin-bottom: 20px;
   -webkit-transition: all 0.35s;
@@ -744,6 +730,22 @@ section#services {
   .social-div p.callus {
     font-size: 30px;
   }
+}
+.social-div a {
+  text-decoration: none;
+  color: #222;
+}
+.social-div i:hover + p {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.social-div a:hover > p {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 .message-div {
   padding: 100px 0;

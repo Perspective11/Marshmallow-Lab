@@ -55,13 +55,6 @@ section {
 aside {
     padding: 50px 0;
 }
-.background1 {
-    background-image: url("../img/header.jpg");
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
-}
 .no-padding {
     padding: 0;
 }
@@ -480,6 +473,13 @@ section#services {
         font-size: 14px;
     }
 }
+#work {
+  .work-heading {
+    margin-top: 100px;
+  }
+  color: white;
+
+}
 .container-fluid.touchballs {
     position: relative;
     //min-height:auto;
@@ -506,7 +506,7 @@ section#services {
             left: 11.7%;
             width: 75%;
             transform: scale(1.03);
-            background-image: url('../img/Touchballs-scr.png');
+            //background-image: url('../img/Touchballs-scr.png');
         }
     }
     #play {
@@ -602,12 +602,15 @@ section#services {
                 font-size: 18px;
             }
         }
+
     }
+
     &:hover {
         .portfolio-box-caption {
             opacity: 1;
         }
     }
+
     @media (min-width: 768px) {
         .portfolio-box-caption {
             .portfolio-box-caption-content {
@@ -620,6 +623,15 @@ section#services {
             }
         }
     }
+
+}
+.know-more {
+    background-color: @theme-primary;
+    // background-image: url("../img/header.jpg");
+    // background-size: cover;
+    // background-position: bottom;
+    // background-attachment: fixed;
+    // background-blend-mode: overlay;
 }
 .call-to-action {
     h2 {
@@ -688,31 +700,19 @@ section#services {
             }
         }
     }
-    .phone-div {
-        color: @theme-primary;
+    .phone-div , .email-div {
+        color: @theme-dark;
+        width: 70%;
+        min-width: 260px;
+        margin: auto;
     }
-    .email-div {
-        color: @theme-primary;
-          }
 
-    a {
-      text-decoration: none;
-    }
-    i:hover + p {
-      transform: scale(1.2);
-      .transition-all();
-    }
-    a:hover > p {
-      transform: scale(1.2);
-      .transition-all();
-    }
     i {
         border-radius: 50%;
         width: 80px;
         height: 80px;
-        background-color: @theme-primary;
-        font-size: 40px;
-        color: white;
+        background-color: white;
+        font-size: 50px;
         padding: 20px;
         margin-bottom: 20px;
         .transition-all();
@@ -732,6 +732,18 @@ section#services {
           font-size:30px;
         }
 
+    }
+    a {
+      text-decoration: none;
+      color: @theme-dark;
+    }
+    i:hover + p {
+      transform: scale(1.2);
+      .transition-all();
+    }
+    a:hover > p {
+      transform: scale(1.2);
+      .transition-all();
     }
 }
 .message-div {
