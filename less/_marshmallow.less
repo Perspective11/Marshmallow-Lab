@@ -94,8 +94,8 @@ aside {
     }
     .nav {
         > li {
-             > a:focus,
-            > a {
+             > a,
+            > a:focus {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
@@ -105,8 +105,8 @@ aside {
                 }
             }
             &.active {
-                 > a:focus,
-                > a {
+                 > a,
+                > a:focus {
                     color: @theme-primary !important;
                     background-color: transparent;
                     &:hover {
@@ -336,8 +336,8 @@ header {
         }
     }
     .timeline-body {
-         > ul,
-        > p {
+         > p,
+        > ul {
             margin-bottom: 0;
             color: fade(white,90%),;
             font-size: 14px;
@@ -351,8 +351,8 @@ header {
             left: 50%;
         }
         .timeline-body {
-             > ul,
-            > p {
+             > p,
+            > ul {
                 border: solid 4px fade(white,50%);
                 border-radius: 20px 4px 20px 20px;
             }
@@ -474,11 +474,10 @@ section#services {
     }
 }
 #work {
-  .work-heading {
-    margin-top: 100px;
-  }
-  color: white;
-
+    .work-heading {
+        margin-top: 100px;
+    }
+    color: white;
 }
 .container-fluid.touchballs {
     position: relative;
@@ -541,8 +540,8 @@ section#services {
             }
         }
         .timeline-body {
-             > ul,
-            > p {
+             > p,
+            > ul {
                 margin: auto;
                 color: white;
                 font-size: 14px;
@@ -602,15 +601,12 @@ section#services {
                 font-size: 18px;
             }
         }
-
     }
-
     &:hover {
         .portfolio-box-caption {
             opacity: 1;
         }
     }
-
     @media (min-width: 768px) {
         .portfolio-box-caption {
             .portfolio-box-caption-content {
@@ -623,7 +619,6 @@ section#services {
             }
         }
     }
-
 }
 .know-more {
     background-color: @theme-primary;
@@ -700,13 +695,17 @@ section#services {
             }
         }
     }
-    .phone-div , .email-div {
+    text-align: center;
+    .email-div,
+    .phone-div {
         color: @theme-dark;
         width: 70%;
         min-width: 260px;
-        margin: auto;
+        margin: 10px auto;
+        width: 100%;
+        padding: auto;
+        display: block;
     }
-
     i {
         border-radius: 50%;
         width: 80px;
@@ -723,27 +722,24 @@ section#services {
         &:hover {
             transform: scale(1.2);
         }
-        @media (min-width: 425px)
-        {
-          font-size:25px;
+        @media (min-width: 425px) {
+            font-size: 25px;
         }
-        @media (min-width: 768px)
-        {
-          font-size:30px;
+        @media (min-width: 768px) {
+            font-size: 30px;
         }
-
     }
     a {
-      text-decoration: none;
-      color: @theme-dark;
+        text-decoration: none;
+        color: @theme-dark;
     }
     i:hover + p {
-      transform: scale(1.2);
-      .transition-all();
+        transform: scale(1.2);
+        .transition-all();
     }
     a:hover > p {
-      transform: scale(1.2);
-      .transition-all();
+        transform: scale(1.2);
+        .transition-all();
     }
 }
 .message-div {
