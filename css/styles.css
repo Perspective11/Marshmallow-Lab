@@ -626,6 +626,75 @@ section#services {
 .know-more {
   background-color: #F05F40;
 }
+#team {
+  padding-top: 100px;
+  color: white;
+  background-color: #222;
+  background-image: url("../img/team-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#team .team-heading {
+  margin-bottom: 75px;
+}
+#team .team-member {
+  margin: 0 auto 50px;
+}
+#team .teamcontainer {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#team .teamcontainer .image-team {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 20px #F05F40;
+  border: solid 5px white;
+  border-radius: 50%;
+  background-color: #F05F40;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#team .teamcontainer .content-team h3 {
+  font-family: 'PT Serif', serif;
+  font-weight: 200;
+}
+#team .teamcontainer .content-team p {
+  opacity: 0.5;
+}
+#team .teamcontainer .content-team a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 10px;
+  padding-top: 6px;
+  color: #222;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  #team .teamcontainer .content-team a {
+    opacity: 0.8;
+  }
+}
+#team .teamcontainer .content-team a:hover {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 15px white;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#team .teamcontainer #member1 .image-team {
+  background-image: url("../img/team/avatar1.jpg");
+}
+#team .teamcontainer #member2 .image-team {
+  background-image: url("../img/team/avatar2.jpg");
+}
+#team .teamcontainer #member3 .image-team {
+  background-image: url("../img/team/avatar3.jpg");
+}
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
