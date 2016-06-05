@@ -477,8 +477,11 @@ section#services {
   position: relative;
   background-color: #F05F40;
 }
+.container-fluid.touchballs h3 {
+  margin-bottom: 30px;
+}
 .container-fluid.touchballs .mobile-view {
-  margin: 50px auto;
+  margin: 30px auto;
 }
 .container-fluid.touchballs .mobile-view img.android {
   height: 100px;
@@ -530,7 +533,7 @@ section#services {
 }
 .container-fluid.touchballs div.content {
   width: auto;
-  margin-top: 50px;
+  margin-top: 30px;
   color: white;
   text-align: center;
 }
@@ -538,7 +541,7 @@ section#services {
   margin-top: 50px;
 }
 .container-fluid.touchballs div.content .timeline-heading .primary {
-  margin-bottom: 15px;
+  margin-bottom: 40px;
 }
 .container-fluid.touchballs div.content .timeline-heading h4 {
   color: inherit;
