@@ -94,8 +94,8 @@ aside {
     }
     .nav {
         > li {
-             > a,
-            > a:focus {
+             > a:focus,
+            > a {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
@@ -105,8 +105,8 @@ aside {
                 }
             }
             &.active {
-                 > a,
-                > a:focus {
+                 > a:focus,
+                > a {
                     color: @theme-primary !important;
                     background-color: transparent;
                     &:hover {
@@ -336,8 +336,8 @@ header {
         }
     }
     .timeline-body {
-         > p,
-        > ul {
+         > ul,
+        > p {
             margin-bottom: 0;
             color: fade(white,90%),;
             font-size: 14px;
@@ -351,8 +351,8 @@ header {
             left: 50%;
         }
         .timeline-body {
-             > p,
-            > ul {
+             > ul,
+            > p {
                 border: solid 4px fade(white,50%);
                 border-radius: 20px 4px 20px 20px;
             }
@@ -487,17 +487,19 @@ section#services {
         margin-bottom: 30px;
         //color: @theme-dark;
     }
-
+    hr {
+        margin-bottom: 30px;
+    }
     .mobile-view {
-        margin: 30px auto;
+        margin: 0 auto 30px;
         img.android {
             height: 100px;
             width: 100px;
-            margin-bottom: 40px;
+            margin: 25px auto;
         }
         div.video-container {
             position: relative;
-            background-image: url("../img/phonecontainer.png");
+            background-image: url("../img/Touchballs/phonecontainer.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -523,7 +525,7 @@ section#services {
         background-position: top;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url('../img/play.png');
+        background-image: url('../img/Touchballs/play.png');
         background-color: inherit;
         border: none;
     }
@@ -532,23 +534,29 @@ section#services {
         margin-top: 30px;
         color: white;
         text-align: center;
-        .timeline-heading {
+        .touchballs-heading {
+            img {
+                width: 300px;
+                height: auto;
+                margin-bottom: 40px;
+            }
             .primary {
                 margin-bottom: 40px;
                 //color: @theme-dark;
             }
-            margin-top: 50px;
-            h4 {
-                color: inherit;
-                //color: @theme-dark;
-                &.subheading {
-                    text-transform: none;
-                }
+            //margin-top: 50px;
+        }
+        h4 {
+            color: inherit;
+            margin-top: 40px;
+            //color: @theme-dark;
+            &.subheading {
+                text-transform: none;
             }
         }
         .timeline-body {
-             > p,
-            > ul {
+             > ul,
+            > p {
                 margin: auto;
                 color: white;
                 font-size: 14px;
@@ -635,7 +643,6 @@ section#services {
     // background-attachment: fixed;
     // background-blend-mode: overlay;
 }
-
 #team {
     //margin: 0 auto 50px;
     padding-top: 100px;
@@ -666,7 +673,7 @@ section#services {
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .content-team{
+        .content-team {
             h3 {
                 .pt-serif-font;
                 font-weight: 200;
@@ -682,12 +689,10 @@ section#services {
                 background-color: white;
                 margin: 0 10px;
                 padding-top: 6px;
-                //box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px white;
                 color: @theme-dark;
                 opacity: 1;
-                @media (min-width: 768px)
-                {
-                    opacity:0.8;
+                @media (min-width: 768px) {
+                    opacity: 0.8;
                 }
                 &:hover {
                     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 15px white;
@@ -696,19 +701,17 @@ section#services {
                 }
             }
         }
-        #member1 .image-team{
+        #member1 .image-team {
             background-image: url("../img/team/avatar1.jpg");
         }
-        #member2 .image-team{
+        #member2 .image-team {
             background-image: url("../img/team/avatar2.jpg");
         }
-        #member3 .image-team{
+        #member3 .image-team {
             background-image: url("../img/team/avatar3.jpg");
         }
     }
 }
-
-
 .call-to-action {
     h2 {
         margin: 0 auto 20px;
@@ -718,13 +721,6 @@ section#services {
     padding: 0;
 }
 .social-div {
-    // background-image: url("../img/contact-background.jpg");
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-blend-mode: darken;
-    //background-blend-mode: overlay;
-    //background-attachment: fixed;
     padding: 100px 0;
     .linkscontainer {
         position: relative;
@@ -832,16 +828,8 @@ section#services {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    //background-blend-mode: overlay;
     background-attachment: fixed;
-    // .heading-text{
-    //   width: 100%;
-    //   text-align: center;
-    //   display: block;
-    //   margin: 0 auto;
-    //   padding: 0;
-    //   overflow: hidden;
-    // }
+
     .form-container {
         text-align: center;
         display: block;
@@ -893,6 +881,111 @@ section#services {
             height: 34px;
         }
     }
+}
+footer {
+    background-color: @theme-dark;
+    border-top: solid 5px @theme-primary;
+    color: white;
+    padding-bottom: 25px;
+    p {
+        clear: both;
+        text-align: left;
+        margin: 25px auto 0;
+        font-size: 10px;
+        .navbar-brand {
+            opacity: 0.5;
+            color: white;
+            .pacifico-font;
+            font-weight: 100;
+            text-transform: capitalize;
+            font-size: 16px;
+            &:focus,
+            &:hover {
+                opacity: 1;
+            }
+            .brand-logo {
+                width: 30px;
+                height: 30px;
+                float: left;
+                margin: -10px 10px 0 19px;;
+                display: block;
+                background-image: url('../img/logo.png');
+                background-position: top;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                .transition-all;
+                &:focus,
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    #copyright {
+        color: grey;
+        margin-left: 35px;
+        margin-top:0;
+    }
+    #aiman {
+        margin-left: 35px;
+        margin-top: 30px;
+        color: grey;
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            .pacifico-font;
+        }
+
+        p#myname {
+
+            color: fade(white, 70%);
+            .pt-serif-font;
+            font-weight: 300;
+            .transition-all;
+            &:hover{
+                color: white;
+                transform: scale(1.2);
+            }
+
+        }
+        p#desc{
+            .bree-serif-font;
+            font-size: 10px;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            font-size: 8px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 0 10px 0 0;
+            float: left;
+            padding-top: 2px;
+            top:2px;
+            color: @theme-dark;
+            opacity: 0.8;
+            @media (min-width: 768px) {
+                opacity: 0.6;
+            }
+            &:hover {
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 15px white;
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+
+
+    }
+
 }
 // Bootstrap Overrides
 .text-primary {
